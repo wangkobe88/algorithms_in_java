@@ -43,11 +43,11 @@ public class MyHashMap<K,V> {
     }
 
     public MyHashMap(int cap){
-        this(cap, this.DEFAULT_CAPACITY);
+        this(cap, DEFAULT_CAPACITY);
     }
 
     public MyHashMap(){
-        this(this.DEFAULT_CAPACITY, this.DEFAULT_CAPACITY);
+        this(DEFAULT_CAPACITY, DEFAULT_CAPACITY);
     }
 
 
