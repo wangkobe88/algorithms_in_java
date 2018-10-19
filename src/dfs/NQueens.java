@@ -12,7 +12,7 @@ public class NQueens {
      */
 
 
-    private boolean judgeValid (Integer[] result, int number, int pos){
+    private boolean isValid (Integer[] result, int number, int pos){
         for (int i = 0; i < number; i++){
             if ((result[i].equals(pos)) || Math.abs(i - number) == Math.abs(result[i] - pos)){
                 return false;
@@ -21,7 +21,7 @@ public class NQueens {
         return true;
     }
 
-    private void dfs(int total, int number, Integer[] result, List<List<Integer>> results ){
+    private void nQueensSolve(int total, int number, Integer[] result, List<List<Integer>> results ){
         if (total == number) {
 
             List<Integer> resultCopy = new ArrayList<Integer>();
@@ -35,10 +35,10 @@ public class NQueens {
         }
 
         for (int i = 0; i < total; i++){
-            if(judgeValid(result, number, i)){
+            if(isValid(result, number, i)){
                 result[number] = i;
                 //System.out.println(Arrays.asList(result));
-                dfs(total, number + 1, result, results);
+                nQueensSolve(total, number + 1, result, results);
             }
         }
     }
@@ -48,7 +48,7 @@ public class NQueens {
         List<List<Integer>> results= new ArrayList<List<Integer>>();
         Integer[] result = new Integer[n];
         //List<Integer> result = new ArrayList<Integer>();
-        dfs(n, 0, result, results);
+        nQueensSolve(n, 0, result, results);
         return results;
     }
 
