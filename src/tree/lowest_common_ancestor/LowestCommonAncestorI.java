@@ -1,4 +1,6 @@
-package tree;
+package tree.lowest_common_ancestor;
+
+import tree.TreeNode;
 
 /**
  * Created by kewang on 9/10/18.
