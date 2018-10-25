@@ -1,4 +1,6 @@
-package tree;
+package tree.binary_search_tree;
+
+import tree.TreeNode;
 
 /**
  * Created by kewang on 22/9/18.
