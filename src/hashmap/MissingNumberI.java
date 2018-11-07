@@ -8,16 +8,16 @@ import java.util.Set;
  */
 public class MissingNumberI {
     public int missing(int[] array) {
-        if (array== null|| array.length <= 0){
+        if (array == null || array.length <= 0) {
             return 1;
         }
         // Write your solution here
         Set<Integer> numbers = new HashSet<Integer>();
-        for (int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             numbers.add(array[i]);
         }
 
-        for (int i = 1; i <= array.length + 1; i++){
+        for (int i = 1; i <= array.length + 1; i++) {
             if (!numbers.contains(i)) {
                 return i;
             }

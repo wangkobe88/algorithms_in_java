@@ -1,5 +1,9 @@
 package hashmap;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by kewang on 30/9/18.
@@ -12,13 +16,13 @@ public class CommonNumbersOfTwoArraysI {
 
         Set<Integer> coommonSet = new HashSet<Integer>();
 
-        for (Integer i : b){
-            if ( aSet.contains(i) ) {
+        for (Integer i : b) {
+            if (aSet.contains(i)) {
                 coommonSet.add(i);
             }
         }
         List<Integer> results = new ArrayList<Integer>();
         results.addAll(coommonSet);
         return results;
-     }
+    }
 }
